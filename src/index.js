@@ -2,7 +2,7 @@ function helloer() {
   return 'hello';
 }
 
-function capitalizer(string) {
+function capitalize(string) {
   let newString;
 
   if (string === '' || string === null) {
@@ -13,4 +13,10 @@ function capitalizer(string) {
   return newString;
 }
 
-module.exports = { helloer, capitalizer };
+function reverseString(string) {
+  let newString = string.split('').reverse().join('');
+
+  return newString;
+}
+
+module.exports = { helloer, capitalize, reverseString };
