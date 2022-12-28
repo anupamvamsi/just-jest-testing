@@ -57,3 +57,61 @@ test('Difference of undefined and a number', () => {
 test('Difference of a string and a number', () => {
   expect(calculator.subtract('23', 16)).toBe(7);
 });
+
+// MULTIPLICATION
+test('Product of two +ve numbers', () => {
+  expect(calculator.multiply(1, 2)).toBe(2);
+});
+
+test('Product of two -ve numbers', () => {
+  expect(calculator.multiply(-1, -2)).toBe(2);
+});
+
+test('Product of -ve and +ve numbers', () => {
+  expect(calculator.multiply(-20, 12)).toBe(-240);
+});
+
+test('Product of null and a number', () => {
+  expect(calculator.multiply(null, 14)).toBe(0);
+});
+
+test('Product of two nulls', () => {
+  expect(calculator.multiply(null, null)).toBe(0);
+});
+
+test('Product of undefined and a number', () => {
+  expect(calculator.multiply(undefined, 2)).toBe(NaN);
+});
+
+test('Product of a string and a number', () => {
+  expect(calculator.multiply('23', 16)).toBe(368);
+});
+
+// DIVISION
+test('Remainder of two +ve numbers', () => {
+  expect(calculator.divide(1, 2)).toBe(0.5);
+});
+
+test('Remainder of two -ve numbers', () => {
+  expect(calculator.divide(-1, -2)).toBe(0.5);
+});
+
+test('Remainder of -ve and +ve numbers', () => {
+  expect(calculator.divide(-20, 12)).toBeCloseTo(-1.67);
+});
+
+test('Remainder of null and a number', () => {
+  expect(calculator.divide(null, 14)).toBe(0);
+});
+
+test('Remainder of two nulls', () => {
+  expect(calculator.divide(null, null)).toBe(NaN);
+});
+
+test('Remainder of undefined and a number', () => {
+  expect(calculator.divide(undefined, 2)).toBe(NaN);
+});
+
+test('Remainder of a string and a number', () => {
+  expect(calculator.divide('23', 16)).toBeCloseTo(1.4375);
+});
