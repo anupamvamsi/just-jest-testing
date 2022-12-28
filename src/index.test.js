@@ -1,4 +1,4 @@
-import { capitalize, helloer, reverseString } from './index';
+import { capitalize, helloer } from './index';
 
 test('helloeing', () => {
   expect(helloer()).toBe('hello');
@@ -23,23 +23,4 @@ test('Capitalize "undefined"', () => {
 
 test('Capitalize "null"', () => {
   expect(capitalize(null)).toBe(null);
-});
-
-// reverseString
-test('Reverse String "hello"', () => {
-  expect(reverseString('hello')).toBe('olleh');
-});
-
-test('Reverse String "h"', () => {
-  expect(reverseString('h')).toBe('h');
-});
-
-test('Reverse String ""', () => {
-  expect(reverseString('')).toBe('');
-});
-
-test('Reverse String <sentence>', () => {
-  expect(reverseString('This is a sentence!\n\tC $# -- _ AABA\t')).toBe(
-    '\tABAA _ -- #$ C\t\n!ecnetnes a si sihT'
-  );
 });
